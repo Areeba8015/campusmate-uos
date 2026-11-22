@@ -1,0 +1,247 @@
+{
+  "reflections": {
+    "am": "are",
+    "was": "were",
+    "i": "you",
+    "i'd": "you would",
+    "i've": "you have",
+    "i'll": "you will",
+    "my": "your",
+    "are": "am",
+    "you've": "I have",
+    "you'll": "I will",
+    "your": "my",
+    "yours": "mine",
+    "you": "me",
+    "me": "you"
+  },
+  "rules": [
+    {
+      "intent": "GREETING",
+      "priority": 15,
+      "patterns": ["\\b(hi|hello|hey|salam|assalam|aoa)\\b"],
+      "responses": [
+        "Assalam-o-Alaikum! I'm **CampusMate UoS** (configured for BS Data Science Regular-1, Semester 3). Ask me about your daily timetable, course instructors, Wazir Agha Library, Prime Cafe, fee challans, or UoS portals!"
+      ]
+    },
+    {
+      "intent": "TIMETABLE_MONDAY",
+      "priority": 12,
+      "patterns": ["\\bmonday\\b"],
+      "responses": [
+        "📅 **Monday Schedule (BSDS Sem-3):**\n- **08:00 – 09:30:** Multivariable Calculus (`MATH-5101`) — *Ms. Ammara Nazar* (`MAB CR-161`)\n- **09:30 – 11:00:** Data Structures (`CMPC-5205`) — *Iqra Waheed* (`MAB L-02`)\n- **11:00 – 12:30:** Software Engineering (`CMPC-5101`) — *Khansa Saleem* (`Smart Lab`)\n- **12:30 – 14:00:** Artificial Intelligence (`CMPC-5207`) — *Rawaish Talat* (`Smart Lab`)"
+      ]
+    },
+    {
+      "intent": "TIMETABLE_TUESDAY",
+      "priority": 12,
+      "patterns": ["\\btuesday\\b"],
+      "responses": [
+        "📅 **Tuesday Schedule (BSDS Sem-3):**\n- **08:00 – 09:30:** Comp. Org. & Assembly Language (`CMPC-5209`) — *Umme Aeman* (`MAB CR-164`)\n- **09:30 – 11:00:** Data Structures (`CMPC-5205`) — *Muddassar Ali Zaidi* (`MAB CR-163`)\n- **11:30 – 13:30:** Computer Networks (`CMPC-5208`) — *Sana Sarfraz* (`MAB CR-164`)\n- **13:30 – 15:30:** Artificial Intelligence (`CMPC-5207`) — *Rawaish Talat* (`MAB CR-162`)"
+      ]
+    },
+    {
+      "intent": "TIMETABLE_WEDNESDAY",
+      "priority": 12,
+      "patterns": ["\\bwednesday\\b"],
+      "responses": [
+        "📅 **Wednesday Schedule (BSDS Sem-3):**\n- **08:00 – 09:30:** Computer Networks (`CMPC-5208`) — *Sana Sarfraz* (`MAB CR-164`)\n- **11:00 – 12:30:** Comp. Org. & Assembly Language (`CMPC-5209`) — *Umme Aeman* (`MAB CR-164`)\n- **12:30 – 14:00:** Data Structures (`CMPC-5205`) — *Muddassar Ali Zaidi* (`MAB CR-164`)"
+      ]
+    },
+    {
+      "intent": "TIMETABLE_THURSDAY",
+      "priority": 12,
+      "patterns": ["\\bthursday\\b"],
+      "responses": [
+        "📅 **Thursday Schedule (BSDS Sem-3):**\n- **11:00 – 13:00:** Comp. Org. & Assembly Language (`CMPC-5209`) — *Umme Aeman* (`MAB CR-161`)\n- **14:00 – 15:30:** Computer Networks (`CMPC-5208`) — *Sana Sarfraz* (`MAB CR-163`)"
+      ]
+    },
+    {
+      "intent": "TIMETABLE_FRIDAY",
+      "priority": 12,
+      "patterns": ["\\bfriday\\b"],
+      "responses": [
+        "📅 **Friday Schedule (BSDS Sem-3):**\n- **08:00 – 09:30:** Multivariable Calculus (`MATH-5101`) — *Ms. Ammara Nazar* (`UMDC Al-Kindi Block IAH CR-183`)\n- **09:30 – 11:00:** Software Engineering (`CMPC-5101`) — *Khansa Saleem* (`MAB CR-165`)\n- **12:30 – 14:00:** Data Structures (`CMPC-5205`) — *Iqra Waheed* (`MAB CR-164`)\n- **14:00 – 15:30:** Artificial Intelligence (`CMPC-5207`) — *Rawaish Talat* (`MAB CR-161`)"
+      ]
+    },
+    {
+      "intent": "TIMETABLE_WEEKEND",
+      "priority": 12,
+      "patterns": ["\\b(saturday|sunday|weekend)\\b"],
+      "responses": [
+        "🎉 No regular classes are scheduled on **Saturday or Sunday** for BS Data Science Regular-1 (Semester 3)!"
+      ]
+    },
+    {
+      "intent": "COURSE_AI",
+      "priority": 11,
+      "patterns": ["\\b(artificial intelligence|cmpc-5207|cmpc 5207|rawaish)\\b"],
+      "responses": [
+        "🤖 **Artificial Intelligence (`CMPC-5207`)** is taught by **Rawaish Talat**:\n- **Mon:** 12:30 – 14:00 (`Smart Lab`)\n- **Tue:** 13:30 – 15:30 (`MAB CR-162`)\n- **Fri:** 14:00 – 15:30 (`MAB CR-161`)"
+      ]
+    },
+    {
+      "intent": "COURSE_DS",
+      "priority": 11,
+      "patterns": ["\\b(data structures|cmpc-5205|cmpc 5205|muddassar|iqra waheed)\\b"],
+      "responses": [
+        "🌳 **Data Structures (`CMPC-5205`)** is taught by **Muddassar Ali Zaidi** & **Iqra Waheed**:\n- **Mon:** 09:30 – 11:00 (`MAB L-02` — Iqra Waheed)\n- **Tue:** 09:30 – 11:00 (`MAB CR-163` — Muddassar Ali Zaidi)\n- **Wed:** 12:30 – 14:00 (`MAB CR-164` — Muddassar Ali Zaidi)\n- **Fri:** 12:30 – 14:00 (`MAB CR-164` — Iqra Waheed)"
+      ]
+    },
+    {
+      "intent": "COURSE_CN",
+      "priority": 11,
+      "patterns": ["\\b(computer networks|networks|cmpc-5208|cmpc 5208|sana sarfraz)\\b"],
+      "responses": [
+        "🌐 **Computer Networks (`CMPC-5208`)** is taught by **Sana Sarfraz**:\n- **Tue:** 11:30 – 13:30 (`MAB CR-164`)\n- **Wed:** 08:00 – 09:30 (`MAB CR-164`)\n- **Thu:** 14:00 – 15:30 (`MAB CR-163`)"
+      ]
+    },
+    {
+      "intent": "COURSE_COAL",
+      "priority": 11,
+      "patterns": ["\\b(assembly|comp organization|computer organization|coal|cmpc-5209|cmpc 5209|umme aeman)\\b"],
+      "responses": [
+        "⚙️ **Comp. Organization & Assembly Language (`CMPC-5209`)** is taught by **Umme Aeman**:\n- **Tue:** 08:00 – 09:30 (`MAB CR-164`)\n- **Wed:** 11:00 – 12:30 (`MAB CR-164`)\n- **Thu:** 11:00 – 13:00 (`MAB CR-161`)"
+      ]
+    },
+    {
+      "intent": "COURSE_SE",
+      "priority": 11,
+      "patterns": ["\\b(software engineering|cmpc-5101|cmpc 5101|khansa)\\b"],
+      "responses": [
+        "💻 **Software Engineering (`CMPC-5101`)** is taught by **Khansa Saleem**:\n- **Mon:** 11:00 – 12:30 (`Smart Lab`)\n- **Fri:** 09:30 – 11:00 (`MAB CR-165`)"
+      ]
+    },
+    {
+      "intent": "COURSE_MVC",
+      "priority": 11,
+      "patterns": ["\\b(multivariable|calculus|math-5101|math 5101|ammara)\\b"],
+      "responses": [
+        "📐 **Multivariable Calculus (`MATH-5101`)** is taught by **Ms. Ammara Nazar**:\n- **Mon:** 08:00 – 09:30 (`MAB CR-161`)\n- **Fri:** 08:00 – 09:30 (`UMDC Al-Kindi Block IAH CR-183`)"
+      ]
+    },
+    {
+      "intent": "TIMETABLE_GENERAL",
+      "priority": 10,
+      "patterns": ["\\b(timetable|time table|schedule|classes|lectures)\\b"],
+      "responses": [
+        "📚 Ask me about a specific day (e.g., *'Monday schedule'*, *'Friday classes'*) or a specific course (e.g., *'AI class'*, *'Data Structures'*, *'Assembly Language'*) for **BS Data Science Regular-1 (Semester 3)**!"
+      ]
+    },
+    {
+      "intent": "UOS_LIBRARY",
+      "priority": 9,
+      "patterns": ["\\b(library|wazir agha|e-library|elibrary|books|hec digital)\\b"],
+      "responses": [
+        "📖 **Wazir Agha Library (UoS Central Library):**\n- **Hours:** Mon–Fri `8:00 AM – 6:30 PM` | Sat `9:00 AM – 5:00 PM`\n- **Digital Access:** Provides access to the HEC Digital Library and OPAC catalog.\n- **Nearby E-Library Sargodha:** Open Mon–Sat `9:00 AM – 8:00 PM` (requires CNIC copy, father's CNIC copy, and E-Library registration form)."
+      ]
+    },
+    {
+      "intent": "UOS_CAFE_FOOD",
+      "priority": 9,
+      "patterns": ["\\b(cafe|prime cafe|canteen|food|lunch|chaat|eat)\\b"],
+      "responses": [
+        "🍽️ **Prime Cafe** is the main on-campus student food hub at University of Sargodha, known for budget-friendly student meals and snacks (like Papri Chaat). Campus Wi-Fi (HEC Smart University Project) also covers major student hangout zones."
+      ]
+    },
+    {
+      "intent": "UOS_MEDICAL",
+      "priority": 9,
+      "patterns": ["\\b(medical|doctor|clinic|umdc|hospital|health|sick)\\b"],
+      "responses": [
+        "🏥 **University Medical & Diagnostic Center (UMDC)** at UoS is open **Monday to Saturday from 9:00 AM to 8:30 PM** for student and staff healthcare."
+      ]
+    },
+    {
+      "intent": "UOS_FEE_CHALLAN",
+      "priority": 9,
+      "patterns": ["\\b(fee|challan|voucher|tuition|self finance|bus card)\\b"],
+      "responses": [
+        "💳 **UoS Fee & Challan Info:**\n- Generate online fee challans via the official UoS portal (`su.edu.pk`).\n- Registered Tehsil bus card holders are exempt from standard bus card fees.\n- Self-Finance seats carry an additional annual charge on top of regular semester dues."
+      ]
+    },
+    {
+      "intent": "UOS_CONTACT_PORTAL",
+      "priority": 9,
+      "patterns": ["\\b(portal|website|contact|phone|email|helpline|address|location|admission|exam)\\b"],
+      "responses": [
+        "🏛️ **University of Sargodha Quick Info:**\n- **Address:** University Road, Sargodha, Punjab 40100\n- **UAN Helpline:** `048-111-867-111`\n- **Emails:** `info@uos.edu.pk` | `admissions@uos.edu.pk` | `registrations@uos.edu.pk`\n- **Official Websites:** `su.edu.pk` & `uos.edu.pk` (Date sheets, results, and syllabus downloads are under the Examinations tab)."
+      ]
+    },
+    {
+      "intent": "UOS_OVERVIEW",
+      "priority": 8,
+      "patterns": ["\\b(about uos|university of sargodha|history|faculties|vice chancellor|vc)\\b"],
+      "responses": [
+        "🎓 **About University of Sargodha (UoS):**\n- Chartered as a public-sector university in **2002** (tracing its roots back to De'Montmorency College in 1929/1934 and Government College Sargodha).\n- Spans **8 faculties** and **40+ teaching departments** (including the Faculty of Computing & Information Technology), serving over 26,000 students."
+      ]
+    },
+    {
+      "intent": "ELIZA_STRESS",
+      "priority": 13,
+      "patterns": [
+        "i am (stressed|worried|anxious|overwhelmed|tired) about (.*)",
+        "i feel (stressed|worried|anxious|overwhelmed) about (.*)"
+      ],
+      "responses": [
+        "It's completely normal to feel {1} about {2} during Semester 3. Have you broken {2} into smaller daily tasks?",
+        "Why do you think {2} is making you feel so {1} right now?"
+      ],
+      "memory_templates": [
+        "Earlier you mentioned you were {1} about {2}. What specific part of {2} feels hardest right now?",
+        "Let's circle back—you said earlier that {2} had you feeling {1}. What have you tried so far to handle it?"
+      ]
+    },
+    {
+      "intent": "ELIZA_CANT",
+      "priority": 13,
+      "patterns": ["i cant (.*)", "i cannot (.*)"],
+      "responses": [
+        "What makes you feel like you cannot {1}?",
+        "Have you tried breaking down how to {1} step by step?"
+      ],
+      "memory_templates": [
+        "Earlier you said you couldn't {1}. Do you still feel blocked on that?"
+      ]
+    },
+    {
+      "intent": "ELIZA_NEED",
+      "priority": 13,
+      "patterns": ["i need (.*)", "i want (.*)"],
+      "responses": [
+        "Why do you feel you need {1} right now?",
+        "If you got {1}, how would that help your semester?"
+      ]
+    },
+    {
+      "intent": "ELIZA_BECAUSE",
+      "priority": 6,
+      "patterns": ["because (.*)"],
+      "responses": [
+        "Is {1} the real reason, or is something else also bothering you?",
+        "How does {1} affect your focus in class?"
+      ]
+    },
+    {
+      "intent": "ELIZA_FEELING",
+      "priority": 5,
+      "patterns": ["i feel (.*)", "i am feeling (.*)"],
+      "responses": [
+        "Tell me more about why you feel {1}.",
+        "How long have you been feeling {1} this semester?"
+      ],
+      "memory_templates": [
+        "Earlier you shared that you feel {1}. Does that connect to your upcoming exams?"
+      ]
+    },
+    {
+      "intent": "FALLBACK",
+      "priority": 1,
+      "patterns": [".*"],
+      "responses": [
+        "Tell me a bit more about that—how does it relate to your classes or studies?",
+        "Interesting. Can you elaborate on that, or ask me about your UoS timetable, courses, or library?"
+      ]
+    }
+  ]
+}
